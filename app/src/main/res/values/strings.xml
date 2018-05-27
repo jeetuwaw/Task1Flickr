@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PhotoViewerApp</string>
+    <string name="screen1">Collection of Photos</string>
+    <string name="screen2">Full Screen Viewer</string>
+
+    <string name="action_refresh">Refresh</string>
+</resources>
