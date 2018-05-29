@@ -1,22 +1,19 @@
 package task.home.com.task1.activitys;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import task.home.com.task1.R;
 import task.home.com.task1.fragments.MainActivityFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
     }
 
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.refresh) {
-            ((MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment)).handleUiAndData();
+            ((MainActivityFragment) getFragmentManager().findFragmentById(R.id.fragment)).handleUiAndData();
             return true;
         }
 

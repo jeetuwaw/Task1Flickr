@@ -7,14 +7,15 @@ import android.os.Parcelable;
 public class GridImages implements Parcelable {
     @SuppressWarnings("CanBeFinal")
     private String mUrl;
-   @SuppressWarnings("CanBeFinal")
-   private String mTitle;
+    @SuppressWarnings("CanBeFinal")
+    private String mTitle;
 
 
-    public  GridImages(String url, String name){
+    public GridImages(String url, String name) {
         mUrl = url;
         mTitle = name;
     }
+
     private GridImages(Parcel in) {
         mUrl = in.readString();
         mTitle = in.readString();

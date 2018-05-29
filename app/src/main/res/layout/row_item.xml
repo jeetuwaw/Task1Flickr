@@ -4,13 +4,14 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <ImageView
+
+    <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/iv_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:adjustViewBounds="true"
-        android:scaleType="center"
-        android:contentDescription="image" />
+        android:background="@color/colorAccent"
+        android:contentDescription="image"
+        android:scaleType="center" />
 
 </LinearLayout>

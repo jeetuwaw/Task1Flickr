@@ -6,20 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".activitys.FullScreenActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="task.home.com.task1.fragments.FullScreenActivityFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/fc_content_main" />
+        android:layout_height="match_parent"
+        tools:layout="@layout/fc_fragment_main" />
 
 </android.support.design.widget.CoordinatorLayout>

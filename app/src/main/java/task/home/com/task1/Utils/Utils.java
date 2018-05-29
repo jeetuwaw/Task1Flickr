@@ -41,23 +41,23 @@ public class Utils {
     public static boolean checkInternetConenction(Activity activity) {
         // get Connectivity Manager object to check connection
         ConnectivityManager connectivityManager
-                =(ConnectivityManager)activity.getSystemService(activity.getBaseContext().CONNECTIVITY_SERVICE);
+                = (ConnectivityManager) activity.getSystemService(activity.getBaseContext().CONNECTIVITY_SERVICE);
 
         // Check for network connections
         assert connectivityManager != null;
-        if ( connectivityManager.getNetworkInfo(0).getState() ==
+        if (connectivityManager.getNetworkInfo(0).getState() ==
                 android.net.NetworkInfo.State.CONNECTED ||
                 connectivityManager.getNetworkInfo(0).getState() ==
                         android.net.NetworkInfo.State.CONNECTING ||
                 connectivityManager.getNetworkInfo(1).getState() ==
                         android.net.NetworkInfo.State.CONNECTING ||
-                connectivityManager.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
+                connectivityManager.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED) {
             return true;
-        }else if (
+        } else if (
                 connectivityManager.getNetworkInfo(0).getState() ==
                         android.net.NetworkInfo.State.DISCONNECTED ||
                         connectivityManager.getNetworkInfo(1).getState() ==
-                                android.net.NetworkInfo.State.DISCONNECTED  ) {
+                                android.net.NetworkInfo.State.DISCONNECTED) {
             return false;
         }
         return false;

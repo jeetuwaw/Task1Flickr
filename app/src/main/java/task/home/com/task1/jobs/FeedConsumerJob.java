@@ -27,7 +27,7 @@ public class FeedConsumerJob extends AsyncTask<String, Integer, FlickrModel> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        ((MainActivityFragment) mActivity.getSupportFragmentManager().
+        ((MainActivityFragment) mActivity.getFragmentManager().
                 findFragmentById(R.id.fragment)).getSpinner().setVisibility(View.VISIBLE);
 
     }
@@ -48,7 +48,7 @@ public class FeedConsumerJob extends AsyncTask<String, Integer, FlickrModel> {
     @Override
     protected void onPostExecute(FlickrModel model) {
         super.onPostExecute(model);
-        ((MainActivityFragment) mActivity.getSupportFragmentManager().
+        ((MainActivityFragment) mActivity.getFragmentManager().
                 findFragmentById(R.id.fragment)).getSpinner().setVisibility(View.GONE);
     }
 }

@@ -16,12 +16,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+
+        <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/fcimage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:adjustViewBounds="true"
-            android:scaleType="center"
-            android:contentDescription="images" />
+            android:background="@color/colorAccent"
+            android:contentDescription="image"
+            android:scaleType="center" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

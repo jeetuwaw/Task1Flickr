@@ -5,5 +5,4 @@
     android:name="task.home.com.task1.fragments.MainActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:layout="@layout/fragment_main" />

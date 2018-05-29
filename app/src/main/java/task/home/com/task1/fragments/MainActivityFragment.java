@@ -1,10 +1,10 @@
 package task.home.com.task1.fragments;
 
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -35,19 +35,6 @@ public class MainActivityFragment extends Fragment {
     private ImageGalleryAdapter recyclerViewAdapter;
     private ArrayList<GridImages> gridList;
     private ProgressBar spinner;
-
-    public MainActivityFragment() {
-    }
-
-
-    public ProgressBar getSpinner() {
-        return spinner;
-    }
-
-    private void setSpinner(ProgressBar spinner) {
-        this.spinner = spinner;
-    }
-
 
     // this method is only called once for this fragment
     @Override
@@ -104,8 +91,8 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void updateViews() {
-        recyclerViewAdapter = new ImageGalleryAdapter(this.getContext(), gridList);
-        layoutManager = new LinearLayoutManager(this.getContext());
+        recyclerViewAdapter = new ImageGalleryAdapter(this.getActivity(), gridList);
+        layoutManager = new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
@@ -132,4 +119,13 @@ public class MainActivityFragment extends Fragment {
         urls = null;
         setSpinner(null);
     }
+
+    public ProgressBar getSpinner() {
+        return spinner;
+    }
+
+    private void setSpinner(ProgressBar spinner) {
+        this.spinner = spinner;
+    }
+
 }
