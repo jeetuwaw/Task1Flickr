@@ -24,7 +24,6 @@
             android:layout_margin="5dp"
             android:adjustViewBounds="true"
             android:background="@color/colorAccent"
-            android:contentDescription="image"
-            android:scaleType="center" />
+            android:contentDescription="image" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
